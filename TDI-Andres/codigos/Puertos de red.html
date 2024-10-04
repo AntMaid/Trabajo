@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Puertos de red</title>
+
+    <link rel="apple-touch-icon" href="assets/img/Luismi.jpeg">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/Luismi.jpeg">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                Puertos de red-Andres
+            </a>
+        </div>
+    </nav>
+
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light py-5">
+        <div class="col-md-6 m-auto text-center">
+            <h1 class="h1">Puertos de red</h1>
+            <h1>Protocolo HTTP: Estructura, Funcionamiento, Métodos de Petición y Códigos de Respuesta</h1>
+
+            <p>El Protocolo de Transferencia de Hipertexto (HTTP) es un protocolo fundamental que permite la comunicación entre clientes y servidores en la World Wide Web. Su estructura y funcionamiento se basan en un modelo cliente-servidor, donde el cliente (normalmente un navegador web) realiza peticiones y el servidor responde a estas solicitudes.</p>
+            
+            <h2>Estructura y Funcionamiento del Protocolo</h2>
+            
+            <p>HTTP opera bajo un esquema de petición-respuesta. Cuando un cliente desea acceder a un recurso, envía una solicitud HTTP al servidor correspondiente. Esta solicitud puede incluir varios elementos, como el método de petición y los encabezados que especifican detalles adicionales sobre la transmisión.</p>
+            
+            <ol>
+              <li><strong>Conexión TCP</strong>: Antes de realizar una solicitud HTTP, el cliente establece una conexión TCP con el servidor. Esta conexión puede ser nueva o reutilizar una existente.</li>
+              <li><strong>Petición HTTP</strong>: La solicitud se envía en formato texto plano (en versiones anteriores a HTTP/2) y contiene información sobre el recurso solicitado.</li>
+              <li><strong>Respuesta del Servidor</strong>: El servidor procesa la solicitud y devuelve una respuesta que incluye un código de estado y, si es pertinente, el contenido del recurso solicitado.</li>
+              <li><strong>Naturaleza sin estado</strong>: La naturaleza del protocolo HTTP es sin estado, lo que significa que cada interacción es independiente; no se conserva información de sesiones anteriores a menos que se utilicen mecanismos como las cookies.</li>
+            </ol>
+            
+            <h2>Métodos de Petición</h2>
+            
+            <p>HTTP define varios métodos de petición, conocidos como "verbos", que indican la acción que el cliente desea realizar sobre el recurso. Los métodos más comunes son:</p>
+            
+            <ul>
+              <li><strong>GET</strong>: Solicita la representación de un recurso específico. Es utilizado para recuperar datos.</li>
+              <li><strong>POST</strong>: Envía datos al servidor para crear o actualizar un recurso.</li>
+              <li><strong>PUT</strong>: Actualiza un recurso existente o crea uno nuevo si no existe.</li>
+              <li><strong>DELETE</strong>: Elimina un recurso específico.</li>
+              <li><strong>HEAD</strong>: Similar a GET, pero solo solicita los encabezados del recurso sin el cuerpo.</li>
+            </ul>
+            
+            <h2>Códigos de Respuesta</h2>
+            
+            <p>Las respuestas del servidor están acompañadas por códigos de estado HTTP, que informan al cliente sobre el resultado de su solicitud. Estos códigos están organizados en varias categorías:</p>
+            
+            <ul>
+              <li><strong>1xx (Informativos)</strong>: Indican que la solicitud ha sido recibida y está siendo procesada.</li>
+              <li><strong>2xx (Éxito)</strong>: Indican que la solicitud ha sido procesada con éxito.</li>
+              <li><strong>3xx (Redirección)</strong>: Indican que se necesita más acción para completar la solicitud.</li>
+              <li><strong>4xx (Errores del Cliente)</strong>: Indican que hubo un error en la solicitud del cliente.</li>
+              <li><strong>5xx (Errores del Servidor)</strong>: Indican que hubo un error en el servidor al procesar la solicitud.</li>
+            </ul>
+
+            
+        </div>
+        <section class="container py-5">
+            <div class="row text-center pt-5 pb-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Regreso</h1>
+                    <p>
+                     
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+    
+                <div class="col-md-6 col-lg-3 pb-5" onclick="goToPage('inicio.html')">
+                   <script>
+    
+                    function goToPage(url) {
+                        window.location.assign(url);
+                    }
+    
+                   </script>
+                   
+                    <div class="h-100 py-5 services-icon-wap shadow">
+                        <img src="assets/img/Delemilocopafuera-removebg-preview.png" alt="" class="img-fluid">
+                       
+               
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
